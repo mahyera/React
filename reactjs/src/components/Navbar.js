@@ -7,16 +7,18 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-function BasicExample() {
+// Props Can also be used as : function BasicExample({title,about})
+function BasicExample(props) {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="/home">Text-ies</Navbar.Brand>
+        {/*  <Navbar.Brand href="/home">{title}</Navbar.Brand> */}
+        <Navbar.Brand href="/home">{props.title}</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link href="/about">{props.about}</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
