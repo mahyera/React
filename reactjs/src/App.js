@@ -2,9 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import PropTypes from 'prop-types';
+import Formtext from './components/FormText.js';
 
 function App() {
   return (
+    <>
     <div className="App">
       <Navbar title="Text-ies" about="About Text-ies"/>
       {/* If we aren't going to pass the values as above. we can use defaultProps
@@ -19,6 +21,8 @@ function App() {
       };      
       */}
     </div>
+    <Formtext heading="Enter your text" />
+    </>
   );
 }
 Navbar.propTypes ={
