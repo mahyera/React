@@ -14,6 +14,14 @@ function BasicExample(props) {
   const handledownClick = () => {
     setText(text.toLowerCase()); // Convert the current text to uppercase
   };
+
+  const handleclear = () => {
+    setText(''); // Convert the current text to uppercase
+  };
+
+  const handleBase = () => {
+    setText(btoa(text)); // Convert the current text to uppercase
+  };
   //we have set the initial state of the text to 'Enter your text here'
   const [text, setText] = useState('');
   ///console.log(text); 
@@ -36,6 +44,10 @@ function BasicExample(props) {
           </Form.Group>
           <Button className='mx-2' variant="primary" type="button" onClick={handleupClick}> Convert to Uppercase</Button>
           <Button variant="primary" type="button" onClick={handledownClick}> Convert to Lowercase</Button>
+          <Button variant="primary mx-2" type="button" onClick={handleclear}> Clear Text</Button>
+          <Button variant="primary mx-2" type="button" onClick={handleBase}> Base64</Button>
+          <Button variant="primary mx-2" type="button" onClick={handleclear}> Clear Text</Button>
+          <Button variant="primary mx-2" type="button" onClick={handleclear}> Clear Text</Button>
         </Form>
       </div>
       <div className="container my-2">
