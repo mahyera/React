@@ -10,7 +10,7 @@ import Button from 'react-bootstrap/Button';
 // Props Can also be used as : function BasicExample({title,about})
 function BasicExample(props) {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-dark navbar-dark">
       <Container>
         {/*  <Navbar.Brand href="/home">{title}</Navbar.Brand> */}
         <Navbar.Brand href="/home">{props.title}</Navbar.Brand>
@@ -27,7 +27,7 @@ function BasicExample(props) {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="primary">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

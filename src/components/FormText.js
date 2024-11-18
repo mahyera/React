@@ -8,12 +8,14 @@ function BasicExample(props) {
   };
 
   // Handles button click
-  const handleClick = () => {
+  const handleupClick = () => {
     setText(text.toUpperCase()); // Convert the current text to uppercase
   };
-
+  const handledownClick = () => {
+    setText(text.toLowerCase()); // Convert the current text to uppercase
+  };
   //we have set the initial state of the text to 'Enter your text here'
-  const [text, setText] = useState('Enter your text here');
+  const [text, setText] = useState('');
   ///console.log(text); 
   // to change the value of text we will use setText function
   //text="new text" will not work
@@ -32,15 +34,18 @@ function BasicExample(props) {
               onChange={handelOnChange} // Updates the text state
             />
           </Form.Group>
-          <Button variant="primary" type="button" onClick={handleClick}>
-            Convert to Uppercase
-          </Button>
+          <Button className='mx-2' variant="primary" type="button" onClick={handleupClick}> Convert to Uppercase</Button>
+          <Button variant="primary" type="button" onClick={handledownClick}> Convert to Lowercase</Button>
         </Form>
       </div>
-      <div className="container">
-        <h2>Text Preview</h2>
-        
-      </div>
+      <div className="container my-2">
+    <h2>Text Preview</h2>
+    <p>{text.trim() === "" ? 0 : text.trim().split(/\s+/).length} words and {text.length} characters</p>
+    <p>{0.008 * text.split(" ").length} Minutes read</p>
+    <h3>Preview</h3>
+    <p>{text}</p>
+</div>
+
     </>
   );
 }
