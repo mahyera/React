@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import PropTypes from 'prop-types';
 import Formtext from './components/FormText.js';
+import About from './components/About.js';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       */}
     </div>
     <Formtext heading="Enter your text" />
+    <About />
     </>
   );
 }
